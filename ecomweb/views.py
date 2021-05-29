@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Products
 
-# Create your views here.
+
+def index(request):
+    product_object = Products.objects.all()
+    return render(request, 'ecomweb/index.html', {"product_object": product_object})
