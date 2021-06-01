@@ -18,3 +18,7 @@ def index(request):
 
     return render(request, 'ecomweb/index.html', {"product_object": product_object})
 
+
+def detail_view(request, id):
+    product_object = Products.objects.get(id=id)
+    return render(request, 'ecomweb/detail.html', {"product_object": product_object})

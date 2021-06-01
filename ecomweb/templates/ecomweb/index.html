@@ -33,7 +33,9 @@
                     <h5 class="card-title">{{ product.title }}</h5>
                     <p class="card-text">{{ product.description }}</p>
                      <b>{{ product.discount_price }}</b> <strike>{{ product.price }}</strike>
-                    <a href="#" class="btn btn-primary">View Details</a>
+                      <br>
+                        <a href="/{{ product.id }}"><button class="btn btn-warning">View</button></a>
+                        <button class="btn btn-warning">Add to card</button>
                   </div>
                 </div>
             </div>
